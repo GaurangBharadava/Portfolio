@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 98px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+.head{
+    margin-top: 15%;
+    margin-left: 20%;
+    font-size: 30px;
+}
+.head h1{
+    font-size: 50px;
+    margin-top: 12px;
+}
+
+.head h1 span{
+    color: red;
+}
+
+/* abot */
+#about{
+    padding: 80px 0px;
+    color: #ababab;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.tab-title{
+    display: flex;
+    margin: 10px -39px 30px;
+
+}
+
+.tab-links{
+    margin: 50px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links:hover::after{
+    width: 100%;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+     list-style: none;
+     margin: 10px 0px;
+}
+.tab-contents ul li span{
+    color: rgb(229, 57, 57);
+    font-size: 13px;
+}
+
+.tab-contents{
+    display: none;
+
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/* ------------------services------------- */
+.services-list{
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+.services-list div{
+    background: #464343;
+    padding: 50px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 14px;
+    display: inline-block;
+}
+.services-list div p{
+    margin-bottom: 14px;
+}
+.services-list div h2{
+    font-size: 30px;
+    color: #ff004f;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.services-list div:hover{
+    cursor: pointer;
+    background-color: #676363;
+    transform: translateY(-10px);
+}
+
+/* ----------------------------------portfolio----------------- */
+#portfolio{
+    padding: 50px 0px;
+}
+
+.work-list{
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px ,1fr)); */
+    gap: 30px;
+    margin-top: 75px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.work img{
+    transition: transform 0.5s;
+}
+.img1{
+    height: 300px;
+    /* width: 100%; */
+    width: 341px;
+    display: block;
+    /* transition: transform 0.5s; */
+}
+.img2{
+    height: 305px;
+    /* width: 100%; */
+    display: block;
+    /* transition: transform 0.5s; */
+}
+.img3{
+    height: 305px;
+    width: 341px;
+    /* width: 100%; */
+    display: block;
+    /* transition: transform 0.5s; */
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #676363);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.layer a{
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    /* background: #fff; */
+}
+
+.work:hover img{
+    transform: scale(1.1);
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    text-decoration: none;
+    color: #ff004f;
+    border-radius: 6px;
+    display: block;
+    margin-left: 40px;
+    margin-top: 31px;
+}
+
+/* --------------contect----------------------- */
+.col-1{
+    flex-basis: 35%;
+}
+.col-2{
+    flex-basis: 60%;
+}
+.col-1 p{
+    margin-top: 30px;
+
+}
+.col-1 p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+    
+}
+.social_icon{
+    margin-top: 30px;
+}
+.social_icon a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    display: inline-block;
+    transition: tarnsform 0.5s;
+}
+.social_icon a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.cv.cv2{
+    display: inline-block;
+    background: #ff004f;
+    padding: 13px 20px;
+    border-radius: 6px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+.col-2 form{
+    width: 100%;
+    margin-left: 20px;
+
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #5e5c5c;
+    padding: 15px;
+    margin: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .cv2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #676363;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* -----------------------css for small screen-------------------- */
+@media only screen and (max-width: 600px){
+    /* write css for small scree in this section  */
+}
